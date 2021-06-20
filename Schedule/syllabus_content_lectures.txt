@@ -45,7 +45,7 @@ In this part of the course, we discuss how to use a computer to generate images 
 LECTURE
 3D Matrix Transformations, Normal Transformations
 
-<ul><li><a href = "../Lectures/5_6_LinearAlgebraWeek/3DTransformations.pdf">3D Transformations Slides</a></li></ul>
+<ul><li><a href = "../Lectures/Module7/3DMatrix.pdf">3D Transformations Slides</a></li></ul>
 LECTURE
 JSON, Scene Graphs
 

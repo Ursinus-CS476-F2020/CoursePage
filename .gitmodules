@@ -7,3 +7,6 @@
 [submodule "Lectures/CharacterAnimation/FABRIK"]
 	path = Lectures/CharacterAnimation/FABRIK
 	url = https://github.com/Ursinus-CS476-F2020/FABRIK.git
+[submodule "Assignments/Indy1_GeomPrimitives"]
+	path = Assignments/Indy1_GeomPrimitives
+	url = https://github.com/Ursinus-CS476-F2020/Indy1_GeomPrimitives.git
