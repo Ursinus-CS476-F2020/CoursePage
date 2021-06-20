@@ -37,3 +37,9 @@
 [submodule "Assignments/Assignment3_Shaders/Assignment3_Shaders"]
 	path = Assignments/Assignment3_Shaders/Assignment3_Shaders
 	url = https://github.com/Ursinus-CS476-F2020/Assignment3_Shaders.git
+[submodule "Assignments/Indy0_SoftwareCheck"]
+	path = Assignments/Indy0_SoftwareCheck
+	url = https://github.com/Ursinus-CS476-F2020/Indy0_SoftwareCheck.git
+[submodule "Assignments/Assignment4_RayTracer/Assignment4_RayTracer"]
+	path = Assignments/Assignment4_RayTracer/Assignment4_RayTracer
+	url = https://github.com/Ursinus-CS476-F2020/Assignment4_RayTracer.git
