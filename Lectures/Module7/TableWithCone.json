@@ -1,0 +1,132 @@
+{
+    "name":"testscene",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 2, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 2, -3],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.00, 1.50, 5.00],
+            "rot": [0.00, 0.00, 0.00, 1.00],
+            "fovy": 1.0
+        }
+    ],
+    
+    "children":[
+        {
+            "transform":[0.71, 0, 0.71, 0,
+                        0, 1, 0, 0,
+                        -0.71, 0, 0.71, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"box",
+                    "length":2,
+                    "width":1,
+                    "height":0.1,
+                    "center":[0, 1, 0],
+                    "material":"red"
+                },
+                {
+                    "type":"box",
+                    "length":0.15,
+                    "width":0.15,
+                    "height":1,
+                    "center":[-0.4, 0.5, -0.7],
+                    "material":"red"
+                },
+                {
+                    "type":"box",
+                    "length":0.15,
+                    "width":0.15,
+                    "height":1,
+                    "center":[0.4, 0.5, -0.7],
+                    "material":"red"
+                },
+                {
+                    "type":"box",
+                    "length":0.15,
+                    "width":0.15,
+                    "height":1,
+                    "center":[-0.4, 0.5, 0.7],
+                    "material":"red"
+                },
+                {
+                    "type":"box",
+                    "length":0.15,
+                    "width":0.15,
+                    "height":1,
+                    "center":[0.4, 0.5, 0.7],
+                    "material":"red"
+                }
+            ], 
+            
+            "children":[
+                {
+                    "transform":[2, 0, 0, 0,
+                                 0, -1, 0, 1.5,
+                                 0,  0, 1, -0.5,
+                                 0,  0, 0, 1],
+                    "shapes":[
+                        {
+                            "type":"cone",
+                            "center":[0, 0, 0],
+                            "height":0.5,
+                            "radius":0.2,
+                            "material":"red"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "transform":[20, 0, 0, 0,
+                        0, 20, 0, 0,
+                        0, 0, 20, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"mesh",
+                "filename":"../meshes/square.off",
+                "material":"green"
+                }
+            ]
+        },
+
+        {
+            "transform":[2, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"sphere",
+                    "radius":0.5,
+                    "center":[0, 0, -10],
+                    "material":"green"
+                }
+            ]
+        }
+    ]
+}
+
+            

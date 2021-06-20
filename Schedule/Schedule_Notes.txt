@@ -1,0 +1,15 @@
+SOFTWARE ENVIRONMENT
+* VS Code Features
+- Show web site hosting after installing Live Server
+- Show how to automate documentation in VS Code
+- Point out unused variables
+- Show code replace in selection
+
+* Explain what ggslac is
+
+* Show Javascript debugger
+
+-----------------------
+* Javascript week 1
+- Show how to call functions in classes
+- Show pitfall that can happen with loop calling method with loop using the same index name
