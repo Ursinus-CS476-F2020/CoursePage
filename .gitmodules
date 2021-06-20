@@ -43,3 +43,6 @@
 [submodule "Assignments/Assignment4_RayTracer/Assignment4_RayTracer"]
 	path = Assignments/Assignment4_RayTracer/Assignment4_RayTracer
 	url = https://github.com/Ursinus-CS476-F2020/Assignment4_RayTracer.git
+[submodule "Assignments/Assignment5_3DShapeModeling"]
+	path = Assignments/Assignment5_3DShapeModeling
+	url = https://github.com/Ursinus-CS476-F2020/Assignment5_3DShapeModeling.git
