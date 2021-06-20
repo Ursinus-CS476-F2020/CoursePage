@@ -1,0 +1,68 @@
+{
+    "name":"spikes",
+    "materials":{
+        "wall":{
+            "ka":[0.00, 0.00, 0.00],
+            "kd":[0.15, 0.15, 0.15],
+            "ks": [0.00, 0.00, 0.00]
+        },
+        "spike":{
+            "ka":[0.00, 0.00, 0.00],
+            "kd":[0.36, 0.25, 0.2],
+            "ks": [0.00, 0.00, 0.00]
+        }
+    },
+    "children":[
+        {
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"box",
+                    "length":5,
+                    "width":5,
+                    "height":1,
+                    "center":[2.5, 0, 2.5],
+                    "material":"wall"
+                },
+                {
+                    "type":"cone",
+                    "radius":0.75,
+                    "height":2.5,
+                    "center":[1.0, 0, 1.0],
+                    "material":"spike" 
+                },
+                {
+                    "type":"cone",
+                    "radius":0.75,
+                    "height":2.5,
+                    "center":[2.5, 0, 2.5],
+                    "material":"spike" 
+                },
+                {
+                    "type":"cone",
+                    "radius":0.75,
+                    "height":2.5,
+                    "center":[1.0, 0, 4.0],
+                    "material":"spike" 
+                },
+                {
+                    "type":"cone",
+                    "radius":0.75,
+                    "height":2.5,
+                    "center":[4.0, 0, 1.0],
+                    "material":"spike" 
+                },
+                {
+                    "type":"cone",
+                    "radius":0.75,
+                    "height":2.5,
+                    "center":[4.0, 0, 4.0],
+                    "material":"spike" 
+                }
+            ]
+        }
+    ]
+}

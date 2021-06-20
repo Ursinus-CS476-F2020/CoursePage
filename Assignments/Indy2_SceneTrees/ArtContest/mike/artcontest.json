@@ -1,0 +1,295 @@
+{
+    "name":"artcontest",
+    "materials":{
+        "white":{
+            "kd":[0.8, 0.8, 0.8]
+        },
+        "grey":{
+            "kd":[0.60, 0.65, 0.60]
+        },
+        "brown":{
+            "kd":[0.396,0.263,0.129]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[-80.00,60.0,-5.0],
+            "color":[0.7, 0.7, 0.7]
+        },
+        {
+            "pos":[0.0,20.0,10.0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[80.0,60.0,-5.0],
+            "color":[0.7, 0.7, 0.7]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [-0.50,22.93,68.61],
+            "rot": [0.09,-0.02,-0.00,1.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.25,9.56,35.57],
+            "rot": [0.14,0.02,0.00,0.99],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.14,38.84,4.04],
+            "rot": [0.10,0.02,0.00,1.00],
+            "fovy": 1.0
+        }
+    ],
+    
+    "children":[
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children":[
+                {
+                    "transform":[2, 0, 0, 0,
+                                0, 1.5, 0, 0.3,
+                                0, 0, 2, 15,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"scene",
+                        "filename":"mike/fullsteps.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[67, 0, 0, 0,
+                                0, 10.7, 0, 0,
+                                0, 0, 45, -19.5,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length": 1,
+                        "width": 1,
+                        "height": 1,
+                        "center": [0,0,0],
+                        "material":"white"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"mike/roof.json"
+                        }
+                    ]
+                    
+                },
+                {
+                    "transform":[65, 0, 0, 0,
+                                0, 20, 0, 14,
+                                0, 0, 27, -20,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length": 1,
+                        "width": 1,
+                        "height": 1,
+                        "center": [0,0,0],
+                        "material":"brown"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1,0,0,20,
+                                 0,1,0,2,
+                                 0,0,1,0,
+                                 0,0,0,1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"mike/pillars.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1,0,0,-20,
+                                 0,1,0,2,
+                                 0,0,1,0,
+                                 0,0,0,1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"mike/pillars.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1,0,0,2,
+                                0,1,0,8.3,
+                                0,0,1,-6.2,
+                                0,0,0,1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"mike/doorframe.json"
+                        }
+                    ] 
+                },
+                {
+                    "transform":[1,0,0,-10,
+                                0,1,0,0,
+                                0,0,1,20,
+                                0,0,0,1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"mike/tpole.json"
+                        }
+                    ] 
+                },
+                {
+                    "transform":[1,0,0,10,
+                                0,1,0,0,
+                                0,0,1,20,
+                                0,0,0,1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"mike/tpole.json"
+                        }
+                    ] 
+                }
+            ]
+        },{
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children":[
+                {
+                    "transform":[1,0,0,-70,
+                                 0,1,0,30,
+                                 0,0,1,0,
+                                 0,0,0,1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"mike/dinotornado.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1,0,0,70,
+                                 0,1,0,30,
+                                 0,0,1,0,
+                                 0,0,0,1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"mike/dinotornado.json"
+                        }
+                    ]
+                }
+            ]
+        },    
+        {
+            "transform":[300, 0, 0, 0,
+                        0, 0, 0, 0,
+                        0, 0, 300, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"mesh",
+                "filename":"../meshes/square.off",
+                "material":"grey"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            "children":[
+                {
+                    "transform":[2,0,0,0,
+                                0,2,0,2.3,
+                                0,0,2,25,
+                                0,0,0,1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"mike/podium.json"
+                        }
+                    ] 
+                },
+                {
+                    "transform":[1,0,0,0,
+                                0,1,0,2,
+                                0,0,-1,40,
+                                0,0,0,1],
+                    "children":[
+                        {
+                            "transform":[1,0,0,-15,
+                                        0,1,0,0,
+                                        0,0,1,0,
+                                        0,0,0,1],
+                            "shapes":[
+                                {
+                                    "type":"scene",
+                                    "filename":"mike/dinocrowd.json"
+                                }
+                            ]
+                        },
+                        {
+                            "transform":[1,0,0,15,
+                                        0,1,0,0,
+                                        0,0,1,0,
+                                        0,0,0,1],
+                            "shapes":[
+                                {
+                                    "type":"scene",
+                                    "filename":"mike/dinocrowd.json"
+                                }
+                            ]
+                        },
+                        {
+                            "transform":[1,0,0,-15,
+                                        0,1,0,0,
+                                        0,0,1,-20,
+                                        0,0,0,1],
+                            "shapes":[
+                                {
+                                    "type":"scene",
+                                    "filename":"mike/dinocrowd.json"
+                                }
+                            ]
+                        },
+                        {
+                            "transform":[1,0,0,15,
+                                        0,1,0,0,
+                                        0,0,1,-20,
+                                        0,0,0,1],
+                            "shapes":[
+                                {
+                                    "type":"scene",
+                                    "filename":"mike/dinocrowd.json"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

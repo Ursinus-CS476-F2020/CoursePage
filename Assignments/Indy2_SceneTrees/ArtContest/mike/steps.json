@@ -1,0 +1,66 @@
+{
+    "name":"step",
+    "materials":{
+        "white":{
+            "kd":[0.6, 0.6, 0.6]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 5, 0],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [8.98,2.58,1.48],
+            "rot": [0.10,-0.61,-0.08,0.78],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children":[
+                    {
+                    "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0.38,
+                                0, 0, 1, -0.38,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length": 1,
+                        "width": 5,
+                        "height": 0.25,
+                        "center":[0, 0, 0],
+                        "material":"white"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length": 0.25,
+                        "width": 5,
+                        "height": 1,
+                        "center":[0, 0, 0],
+                        "material":"white"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

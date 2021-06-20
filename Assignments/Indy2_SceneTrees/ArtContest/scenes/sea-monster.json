@@ -1,0 +1,184 @@
+{
+    "name":"seamonster",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "black":{
+            "kd":[0.0, 0.0, 0.0],
+            "ks":[1.0, 1.0, 1.0]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 10, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 2, -3],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [-0.41, 0.51, 20.09],
+            "rot": [0.00, 0.00, 0.00, 1.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.00, 1.50, -5.00],
+            "rot": [0.00, 1.00, 0.00, 0.00],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+        {
+            "transform":[0.5, 0, 0, 0,
+                        0, 0.5, 0, 0,
+                        0, 0, 0.5, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"mesh",
+                "filename":"../meshes/torus30x30.off",
+                "material":"green"
+                }
+            ]
+        },
+        {
+            "transform":[0.5, 0, 0, 6,
+                        0, 0.5, 0, 0,
+                        0, 0, 0.5, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"mesh",
+                "filename":"../meshes/torus30x30.off",
+                "material":"green"
+                }
+            ]
+        },
+        {
+            "transform":[0.5, 0, 0, -6,
+                        0, 0.5, 0, 0,
+                        0, 0, 0.5, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"mesh",
+                "filename":"../meshes/torus30x30.off",
+                "material":"green"
+                }
+            ]
+        },
+        {
+            "transform":[0.525, -0.851, 0, -10,
+                        0.851, 0.525, 0, -0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"cone",
+                "radius":0.5,
+                "height":6,
+                "material":"green"
+                }
+            ]
+        },
+        {
+            "transform":[-0.598, -0.801, 0, -15,
+                        0.801, -0.598, 0, 2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children":[
+                {
+                    "transform":[2, 0, 0, 0,
+                                0, 2, 0, 0,
+                                0, 0, 0.1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"mesh",
+                        "filename":"../meshes/triangularPrism.off",
+                        "material":"green"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "transform":[0.525, 0.851, 0, 10,
+                        -0.851, 0.525, 0, -0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"cylinder",
+                "radius":0.5,
+                "height":6,
+                "material":"green"
+                }
+            ]
+        },
+        {
+            "transform":[1.5, 0, 0, 13,
+                        0, 0.5, 0, 1.1,
+                        0, 0, 0.5, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"sphere",
+                "radius":0.5,
+                "material":"green"
+                }
+            ]
+        },
+        {
+            "transform":[0.3, 0, 0, 13,
+                        0, 0.3, 0, 1.1,
+                        0, 0, 0.6, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"sphere",
+                "radius":1,
+                "material":"black"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 12.5,
+                0, 0.707, -0.707, 1,
+                0, 0.707, 0.707, 0,
+                0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"cone",
+                "radius":0.3,
+                "height":1.5,
+                "material":"green"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 12.5,
+                        0, 0.707, 0.707, 1,
+                        0, -0.707, 0.707, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"cone",
+                "radius":0.3,
+                "height":1.5,
+                "material":"green"
+                }
+            ]
+        }
+    ]
+
+}

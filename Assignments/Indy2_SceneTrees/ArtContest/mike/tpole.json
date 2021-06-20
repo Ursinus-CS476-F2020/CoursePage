@@ -1,0 +1,59 @@
+{
+    "name":"tpole",
+    "materials":{
+        "white":{
+            "kd":[0.9, 0.9, 0.9]
+        },
+        "brown":{
+            "kd":[0.396,0.263,0.129]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 5, 0],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.70, 8.86, 31.70],
+            "rot": [0.11, -0.02, 0.00, 0.99],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+        {
+            "transform":[0.01, 0, 0, 0.65,
+                        0, 0.01, 0, 4,
+                        0, 0, 0.01, 10,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"../meshes/proftralie.off",
+                    "material":"brown"
+                }
+            ]
+        },
+        {
+            "transform":[3, 0, 0, 0,
+                        0, 6.6, 0, 0,
+                        0, 0, 3, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"box",
+                "length": 1,
+                "width": 1,
+                "height": 1,
+                "center": [0,0,0],
+                "material":"white"
+                }
+            ]
+        }
+        
+    ]
+}

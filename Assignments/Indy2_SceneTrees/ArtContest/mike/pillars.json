@@ -1,0 +1,111 @@
+{
+    "name":"pillars",
+    "materials":{
+        "white":{
+            "kd":[0.9, 0.9, 0.9]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 5, 0],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.70, 8.86, 31.70],
+            "rot": [0.11, -0.02, 0.00, 0.99],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+        {
+            "transform":[1, 0, 0, 0,
+                         0, 25, 0, 10,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"cylinder",
+                "length": 1.0,
+                "width": 1.0,
+                "height": 1.0,
+                "center":[0, 0, 0],
+                "material":"white"
+                }
+            ],
+            "children":[
+                { 
+                    "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "children":[
+                        {
+                            "transform":[1, 0, 0, 5,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius":1,
+                                "height":1,
+                                "center":[0, 0, 0],
+                                "material":"white"
+                                }
+                            ]
+                        },
+                        {
+                            "transform":[1, 0, 0, 10,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius":1,
+                                "height":1,
+                                "center":[0, 0, 0],
+                                "material":"white"
+                                }
+                            ]
+                        },
+                        {
+                            "transform":[1, 0, 0, -5,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius":1,
+                                "height":1,
+                                "center":[0, 0, 0],
+                                "material":"white"
+                                }
+                            ]
+                        },{
+                            "transform":[1, 0, 0, -10,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius":1,
+                                "height":1,
+                                "center":[0, 0, 0],
+                                "material":"white"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

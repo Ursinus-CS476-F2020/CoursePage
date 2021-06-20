@@ -1,0 +1,72 @@
+{
+    "name":"roof",
+    "materials":{
+        "white":{
+            "kd":[1.0, 1.0, 1.0]
+        },
+        "brown":{
+            "kd":[0.396,0.263,0.129]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 30, 0],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.70, 8.86, 31.70],
+            "rot": [0.11, -0.02, 0.00, 0.99],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+        {
+            "transform":[66, 0, 0, 0,
+                        0, 10, 0, 29,
+                        0, 0, 45, -20,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"../meshes/triangularPrism.off",
+                    "material":"brown"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 0, 1, 36.5,
+                        0, -1, 0, -2.5,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"../meshes/dinopet.off",
+                    "material":"brown"
+                }
+            ]
+        },
+        {
+            "transform":[5, 0, 0, 0,
+                        0, 3, 0, 33,
+                        0, 0, 5, -4,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"box",
+                "length": 1,
+                "width": 1,
+                "height": 1,
+                "center": [0,0,0],
+                "material":"white"
+                }
+            ]
+        }
+        
+    ]
+}

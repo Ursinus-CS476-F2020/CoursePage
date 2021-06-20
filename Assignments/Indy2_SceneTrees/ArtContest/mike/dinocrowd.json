@@ -1,0 +1,91 @@
+{
+    "name":"dinocrowd",
+    "materials":{
+        "white":{
+            "kd":[1.0, 1.0, 1.0]
+        },
+        "red":{
+            "ka":[0.5,0.5,0.5],
+            "kd":[0.6,0,0]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 30, 0],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.70, 8.86, 31.70],
+            "rot": [0.11, -0.02, 0.00, 0.99],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, -5,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"scene",
+                    "filename":"mike/dinoline.json"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, -10,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"scene",
+                    "filename":"mike/dinoline.json"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 5,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"scene",
+                    "filename":"mike/dinoline.json"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 10,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"scene",
+                    "filename":"mike/dinoline.json"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"scene",
+                    "filename":"mike/dinoline.json"
+                }
+            ]
+        }
+        
+    ]
+}

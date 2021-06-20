@@ -25,3 +25,15 @@
 [submodule "Materials/JavaScript_MOCAP_Animation"]
 	path = Materials/JavaScript_MOCAP_Animation
 	url = https://github.com/ctralie/JavaScript_MOCAP_Animation.git
+[submodule "ClassExercises/VRAR"]
+	path = ClassExercises/VRAR
+	url = https://github.com/Ursinus-CS476-F2020/VRAR.git
+[submodule "Assignments/Indy2_SceneTrees/Indy2_Dino"]
+	path = Assignments/Indy2_SceneTrees/Indy2_Dino
+	url = https://github.com/Ursinus-CS476-F2020/Indy2_Dino.git
+[submodule "Assignments/Indy2_SceneTrees/ArtContest/ggslac"]
+	path = Assignments/Indy2_SceneTrees/ArtContest/ggslac
+	url = https://github.com/ctralie/ggslac.git
+[submodule "Assignments/Assignment3_Shaders/Assignment3_Shaders"]
+	path = Assignments/Assignment3_Shaders/Assignment3_Shaders
+	url = https://github.com/Ursinus-CS476-F2020/Assignment3_Shaders.git

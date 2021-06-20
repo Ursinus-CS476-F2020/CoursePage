@@ -1,0 +1,76 @@
+{
+    "name":"podium",
+    "materials":{
+        "green":{
+            "ka":[0.14,0.14,0.14],
+            "kd":[0.35,0.58,0.32]
+        },
+        "yellow":{
+            "ka":[0,0,0],
+            "kd":[1.0,0.682,0.259]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[5, 10, 5],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.70, 8.86, 10.70],
+            "rot": [0.29, -0.02, 0.00, 0.99],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 0, 1, 0.8,
+                        0, -1, 0, -2,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"mesh",
+                "filename":"../meshes/dinopet.off",
+                "material":"green"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1.7, 0, -0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"box",
+                "length": 1,
+                "width": 1,
+                "height": 1,
+                "center": [0,0,0],
+                "material":"yellow"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 0.983, 0.182, 0.5,
+                        0, -0.182, 0.983, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"box",
+                "length": 1.5,
+                "width": 1.5,
+                "height": 0.5,
+                "center": [0,0,0],
+                "material":"yellow"
+                }
+            ]
+        }
+    ]
+}

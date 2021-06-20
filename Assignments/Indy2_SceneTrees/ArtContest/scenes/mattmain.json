@@ -1,0 +1,372 @@
+{
+    "name":"main",
+    "materials":{
+        "wall":{
+            "kd":[0.25, 0.25, 0.25]
+        },
+        "floor":{
+            "kd":[0.1, 0.1, 0.1],
+            "ks":[0.25, 0.25, 0.25]
+        },
+        "sky":{
+            "ka":[0.00, 0.55, 0.85]
+        },
+        "fire":{
+            "ka":[0.85, 0.35, 0.00]
+        },
+        "lightstone":{
+            "kd":[0.75, 0.75, 0.75],
+            "ks": [0.25, 0.25, 0.25]
+        }
+    },
+    "lights":[
+        {
+            "pos":[3.5, 22.5, -6],
+            "color":[1, 1, 1],
+            "atten": [0, 0.05, 0]
+        },
+        {
+            "pos":[-5.5, 3.25, -15.875],
+            "color":[0.85, 0.35, 0.00],
+            "atten": [0, 0.1, 0]
+        },
+        {
+            "pos":[5.5, 3.25, -15.875],
+            "color":[0.85, 0.35, 0.00],
+            "atten": [0, 0.1, 0]
+        }
+    ],
+    "cameras":[
+        {
+            "pos": [0.00, 2.00, 20.00],
+            "rot": [0.00, 0.00, 0.00, 1.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [-0.74,10.57,16.08],
+            "rot": [0.47,0.02,0.01,0.88],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.14,4.21,0.01],
+            "rot": [0.06,0.00,0.00,1.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.00,2.89,-8.15],
+            "rot": [0.00, 0.00, 0.00, 1.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [1.54,4.81,-3.41],
+            "rot": [-0.54,0.12,-0.08,0.83],
+            "fovy": 1.0
+        },
+        {
+            "pos": [4.22,20.64,-7.73],
+            "rot": [-0.59,0.13,-0.10,0.79],
+            "fovy": 1.0
+        },
+        {
+            "pos": [10.19,22.86,-8.31],
+            "rot": [0.01,-0.77,-0.01,0.64],
+            "fovy": 1.0
+        }
+    ],
+    "children":[
+        {
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"box",
+                    "length":65,
+                    "width":45,
+                    "height":1,
+                    "center":[0, 25.0, 0],
+                    "material":"sky"
+                },
+                {
+                    "type":"box",
+                    "length":30,
+                    "width":25,
+                    "height":4,
+                    "center":[0, -2, -5],
+                    "material":"floor"
+                },
+                {
+                    "type":"box",
+                    "length":10,
+                    "width":25,
+                    "height":4,
+                    "center":[0, -2, 20.0],
+                    "material":"floor"
+                },
+                {
+                    "type":"box",
+                    "length":1,
+                    "width":25,
+                    "height":20,
+                    "center":[0, 10, -20.5],
+                    "material":"wall"
+                },
+                {
+                    "type":"box",
+                    "length":1,
+                    "width":25,
+                    "height":20,
+                    "center":[0, 10, 25.5],
+                    "material":"wall"
+                },
+                {
+                    "type":"box",
+                    "length":45,
+                    "width":1,
+                    "height":25,
+                    "center":[-13, 7.5, 2.5],
+                    "material":"wall"
+                },
+                {
+                    "type":"box",
+                    "length":45,
+                    "width":1,
+                    "height":25,
+                    "center":[13, 7.5, 2.5],
+                    "material":"wall"
+                },
+                {
+                    "type":"box",
+                    "length":22.5,
+                    "width":25,
+                    "height":1,
+                    "center":[0, 20, 15.0],
+                    "material":"wall"
+                },
+                {
+                    "type":"box",
+                    "length":24,
+                    "width":15,
+                    "height":1,
+                    "center":[-5, 20, -8],
+                    "material":"wall"
+                },
+                {
+                    "type":"box",
+                    "length":8,
+                    "width":15,
+                    "height":1,
+                    "center":[5, 20, 0],
+                    "material":"wall"
+                },
+                {
+                    "type":"box",
+                    "length":8,
+                    "width":15,
+                    "height":1,
+                    "center":[5, 20, -16],
+                    "material":"wall"
+                },
+                {
+                    "type":"box",
+                    "length":8,
+                    "width":9,
+                    "height":1,
+                    "center":[10, 20, -8],
+                    "material":"wall"
+                }
+            ],
+            "children":[
+                {
+                    "transform":[
+                        1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, -15,
+                        0, 0, 0, 1
+                    ],
+                    "shapes":[
+                        {
+                            "type":"box",
+                            "length":10,
+                            "width":15,
+                            "height":1,
+                            "center":[0, 0, 0],
+                            "material":"wall"
+                        },
+                        {
+                            "type":"box",
+                            "length":0.5,
+                            "width":0.5,
+                            "height":3,
+                            "center":[-5.5, 1.5, -1],
+                            "material":"lightstone"
+                        },
+                        {
+                            "type":"box",
+                            "length":0.25,
+                            "width":0.25,
+                            "height":0.25,
+                            "center":[-5.5, 3.125, -1],
+                            "material":"fire"
+                        },
+                        {
+                            "type":"box",
+                            "length":0.5,
+                            "width":0.5,
+                            "height":3,
+                            "center":[5.5, 1.5, -1],
+                            "material":"lightstone"
+                        },
+                        {
+                            "type":"box",
+                            "length":0.25,
+                            "width":0.25,
+                            "height":0.25,
+                            "center":[5.5, 3.125, -1],
+                            "material":"fire"
+                        }
+                    ],
+                    "children":[
+                        {
+                            "transform":[
+                                0.707106781, 0, 0.707106781, 0,
+                                0, 1, 0, 0,
+                                -0.707106781, 0, 0.707106781, -1.5,
+                                0, 0, 0, 1
+                            ],
+                            "shapes":[
+                                {
+                                    "type":"box",
+                                    "length":5,
+                                    "width":5,
+                                    "height":2,
+                                    "center":[0, 0, 0],
+                                    "material":"wall"
+                                },
+                                {
+                                    "type":"box",
+                                    "length":1,
+                                    "width":1,
+                                    "height":1.5,
+                                    "center":[0, 1, 0],
+                                    "material":"lightstone"
+                                }
+                            ]
+                        },
+                        {
+                            "transform":[
+                                0.0025, 0, 0, 0.19,
+                                0, 0.0025, 0, 1.85,
+                                0, 0, 0.0025, 1,
+                                0, 0, 0, 1
+                            ],
+                            "shapes":[
+                                {
+                                    "type":"mesh",
+                                    "filename":"../meshes/proftralie.off"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, 3,
+                        0, 1, 0, 15.5,
+                        0, 0, 1, -10,
+                        0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type": "scene",
+                            "filename": "scenes/vine.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[0, 0, 1, 5,
+                        0, 2, 0, 11,
+                        -1, 0, 0, -6,
+                        0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type": "scene",
+                            "filename": "scenes/vine.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, 1.5,
+                        0, 0, 1, 22,
+                        0, -1, 0, -6,
+                        0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, -12.5,
+                        0, 1, 0, -3,
+                        0, 0, 1, 10,
+                        0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type": "scene",
+                            "filename": "scenes/spikes.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, 2.5,
+                        0, 1, 0, -3,
+                        0, 0, 1, 10,
+                        0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type": "scene",
+                            "filename": "scenes/spikes.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, 7.5,
+                        0, 1, 0, -3,
+                        0, 0, 1, 10,
+                        0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type": "scene",
+                            "filename": "scenes/spikes.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, -2.5,
+                        0, 1, 0, -3,
+                        0, 0, 1, 10,
+                        0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type": "scene",
+                            "filename": "scenes/spikes.json"
+                        }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, -7.5,
+                        0, 1, 0, -3,
+                        0, 0, 1, 10,
+                        0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type": "scene",
+                            "filename": "scenes/spikes.json"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

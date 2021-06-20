@@ -1,0 +1,82 @@
+{
+    "name":"toybridge",
+    "materials":{
+        "blue":{
+            "ka":[0.0, 0.137, 0.4]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 5, 0],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.00, 15.00, 5.00],
+            "rot": [0.55, 0.00, 0.00, 0.80],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+        {
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"box",
+                "length": 0.4,
+                "width": 2.0,
+                "height": 0.2,
+                "center":[0, 0, 0],
+                "material":"blue"
+                }
+            ],
+            "children":[
+                { 
+                    "transform":[1, 0, 0, 0,
+                        0, 2, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "children":[
+                        {
+                            "transform":[0.4, 0, 0, -1,
+                                        0, 1, 0, 0,
+                                        0, 0, 0.2, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius":1,
+                                "height":1,
+                                "center":[0, 0, 0],
+                                "material":"blue"
+                                }
+                            ]
+                        },
+                        {
+                            "transform":[0.4, 0, 0, 1,
+                                        0, 1, 0, 0,
+                                        0, 0, 0.2, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius":1,
+                                "height":1,
+                                "center":[0, 0, 0],
+                                "material":"blue"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
