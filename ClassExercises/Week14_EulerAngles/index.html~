@@ -1,0 +1,89 @@
+<!-- Start of Header Code -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="../../main.css" />
+<link rel="icon" href="../../../favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon"/>
+<!--LaTeX in Javascript!-->
+<script src="../../../../jsMath/easy/load.js"></script>
+<!--Syntax highlighting in Javascript!-->
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<title>COMPSCI/MATH 290: Digital 3D Geometry Spring 2016</title>
+</head>
+<body>
+<div id="wrapper">
+
+<div id="menu-bar">
+<center><h1>COMPSCI/MATH 290: Spring 2016</h1></center>
+<ul class="menus-level0">
+<li><a href="../../index.html">General</a></li>
+<li><a href = "../../syllabus.html">Syllabus</a></li>
+<li><a href = "../../assignments.html">Assignments</a></li>
+<li><a href = "../../finalproject.html">Final Project</a></li>
+<li><a href = "../../raffle.html">Raffle</a></li>
+</ul>
+</div>
+<!-- End of Header Code -->
+
+<div id="page-content">
+<h1>Mini Assignment 2: Euler Angles Visualization (15 Points)</h1>
+<h2>By <a href = "http://www.ctralie.com">Chris Tralie</a></h2>
+
+In this short assignment you will visually explore one common representation of rotations in 3D with three numbers, also known as <i>Euler Angles</i>. 
+<h3><a href = "../../Materials/EulerAnglesViz">Click here</a> to launch the GUI that you will use in this assignment.</h3>  The GUI consists of a set of <a href = "https://en.wikipedia.org/wiki/Gimbal">gimbals</a>, which are motorized spinning rings which can be used to realize Euler Angles.
+
+<BR><BR>
+<b><u>Submit a file called "Readme.txt" on Sakai with the answers to the questions below</u></b>
+
+<BR><BR>
+<a name = "question1"><h3>Question 1: (<b>5 Points</b>)</h3></a>
+Take a moment to play around with the GUI and familiarize yourself with gimbals.  In this particular example, the outer ring is yaw (rotation about the y-axis), the middle ring connected to it is pitch (rotation about the x-axis), and the inner ring connected to the pitch ring is roll (rotation about the z-axis).  As described in class, the rotation matrices about the individual axes can be described as follows:<BR><BR>
+
+<table border = "1" cellpadding = "10">
+<tr>
+<td>Pitch (Rotation About X by gamma)</td>
+<td><h3><div id="rotXEq"></div></h3></td>
+</tr>
+<tr>
+<td>Yaw (Rotation About Y by beta)</td>
+<td><h3><div id="rotYEq"></div></h3></td>
+</tr>
+<tr>
+<td>Roll (Rotation About Z by alpha)</td> 
+<td>
+<h3>
+<div id="rotZEq"></div>
+</h3>
+</td>
+</tr>
+</table>
+<BR><BR>
+<b>NOTE:</b> The coordinate system assumed here is a right handed coordinate system where (+X) is to the right, (+Y) is up, and (+Z) is out of the monitor, as shown below, and <i>this convention for roll/pitch/yaw may be slightly different than others you see on the web (though it's consistent with the way we've been defining our coordinate system)</i>:<BR><BR>
+<img src = "CoordinateSystem.svg">
+
+<BR><BR>
+<u><b>Question:</b></u> In terms of <h3>\[ R_X(\gamma), R_Y(\beta), \text{and } R_Z(\alpha) \]</h3>
+
+Write down the matrix product <b>R<SUB>Final</SUB> = ABC</b> that performs the overall rotation of the gimbal system.  That is, find an <b>R</b> that gets the airplane to its final orientation after composing all gimbals in the order that they are arranged in the app, assuming that each point on the airplane is a column vector which is multiplied on the right by <b>R</b>.  No need to expand the product; simply indicate which order those three matrices go in (i.e. which one is <b>A</b>, which one is <b>B</b>, and which one is <b>C</b> in the above product?).
+
+<a name = "question2"><h3>Question 2: (<b>5 Points</b>)</h3></a>
+
+In the app, set the pitch to 270 degrees.  Now move the yaw around by itself, and move the roll around by itself.  What can you say about the effect of doing yaw and the effect of doing roll when the pitch is in this position that makes it different from when pitch is in most other positions?  Can you find another pitch for which a similar phenomenon happens?
+
+<a name = "question3"><h3>Question 3: (<b>5 Points</b>)</h3></a>
+Now you will examine an animation that results when gimbals are used to move from one orientation to another.  For orientation 1, set the pitch to be something less than 270 degrees and for orientation 2, set the pitch to be something greater than 270 degrees.  Set the yaws and rolls to be different values before and after also (but it doesn't matter what they are).  Now click "animate."  What do you notice when the pitch passes through 270 degrees?  No need for any rigorous explanation, just describe what you see.  How about if you design an animation which passes through the other angle that you selected in question 2?
+</a>
+
+
+</div>
+
+<script src = "Equations.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!-- Header !-->
+	<head>
+		<title>Ursinus CS 476: Computer Graphics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../../assets/css/ie8.css" /><![endif]-->
+        <style>
+        .image_off, #home:hover .image_on{
+           display:none
+        }
+        .image_on, #home:hover .image_off{
+           display:block
+        }
+        </style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><strong>Ursinus CS 476: Computer Graphics</strong></a>
+								</header>
+<!-- End Header !-->
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+                                        <h2>Week 5 Shaders Exercise: Image Processing</h2>
+									</header>
+
+									<div id="page-content">
+									
+										
+										<h2>Getting Started</h2>
+                                        <a href = "https://github.com/Ursinus-CS476-F2019/Mini3_Shaders/">Click here</a> to download the repository of skeleton code for this exercise (and for assignment 3).  
+
+										<BR><BR><HR>
+                                        <h2>Task 1: Emboss Filter</h2>
+                                        <p>
+                                            I showed the laplacian filter (TextureShaders/laplacian.frag), which makes edges of the image pop out.  There's a similar type of filter you can make that applies a directional filter, followed by a grayscale, which makes things look like they are "embossed."  The image below shows the pattern of nearby pixels to take and what their weights are
+										</p>
+										
+										<img src = "Emboss.svg">
+
+										<p>
+											Fill in the file <code>TextureShaders/emboss.frag</code> to implement this.  The cats image should come out looking like this:
+										</p>
+
+										<img src = "Emboss.png">
+
+										<BR><BR><HR>
+										<h2>Task 2: Median Filter</h2>
+										<p>
+											There's a type of noise that pops up in images called <a href = "https://en.wikipedia.org/wiki/Salt-and-pepper_noise">salt and pepper noise</a>, in which pixels are randomly flipped to either totally saturated (white) or totally unsaturated (black).  The image below shows such an example:
+										</p>
+										<img src = "WinterTreeSalt.jpg">
+
+										<p>
+											If we try to clean this up by taking a mean, we end up just smudging that noise:
+										</p>
+
+										<img src = "Mean3x3.png">
+
+										<p>
+											A better way to clean this up is to use a <a href = "https://en.wikipedia.org/wiki/Median_filter">median filter</a>.  For each pixel, we'll still look at a bunch of pixels in a square nearby, but instead of taking their mean, we'll take their median channel by channel.  This works well because medians are more resistant to outliers than means, and salt and pepper are outliers.  Below is an example with the same sized window using the median instead of the mean.  It's clear how much better the results are.
+										</p>
+
+										<img src = "Median3x3.png">
+
+										<p>
+											If we take a window that's slightly larger, we get rid of even more of the noise, at the cost of blurring
+										</p>
+
+										<img src = "Median5x5.png">
+
+										<p>
+											There is a problem, however.  There is no median function in GLSL!  One algorithm you may have in your mind is to sort the numbers and then find the one in the middle.  And you can try that if you'd like, but you'll need to set up an array of the appropriate size and to be very careful with indices.  There's also no recursion in GLSL, so you'll need an iterative scheme like <a href = "https://en.wikipedia.org/wiki/Insertion_sort">Insertion sort</a>.
+										</p>
+
+										<p>
+											I'd actually like to advocate for another scheme in this assignment.  Another definition of the median of a set of points on the number line is the point which minimizes the sum of the absolute differences to the points in question.  For example, let's say we have the numbers (0, 1, 5, 7, 20).  Below is a plot of the sum of the absolute differences of numbers in the interval [-10, 30] to these numbers:
+										</p>
+
+										<img src = "MedianMinimization.svg">
+
+										<p>
+											As you can see, the global min occurs at 5, which coincides with our definition of the median.
+										</p>
+
+										<p>
+											To find global mins of functions numerically, we can use the method of <a href = "https://en.wikipedia.org/wiki/Golden-section_search">Golden sections</a>.  I've already filled most of the code in for you, but you can see some good Python pseudocode at <a href = "https://en.wikipedia.org/wiki/Golden-section_search#Iterative_algorithm">this link</a>.  But in essence, we're going to start with some interval and successively make it smaller and smaller until it converges to the location of the min.  I've filled in most of the code for you and I've provided tons of comments, so hopefully we'll be able to get through it in class.  It's definitely easier than sorting in GLSL once you get the hang of it.  And the result is really cool!
+										</p>
+                                    </div>
+						</div>
+					</div>
+
+					<!--LaTeX in Javascript!-->
+					<script src="../../../../jsMath/easy/load.js"></script>
+					<!--Syntax highlighting in Javascript!-->
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+					<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+					<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+					<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+                                        <li>
+											<span class="opener">General</span>
+											<ul>
+												<li><a href = "../../index.html#overview">Overview</a></li>
+												<li><a href = "../../index.html#logistics">Technology Logistics</a></li>
+												<li><a href = "../../index.html#homework">Homework</a></li>
+												<li><a href = "../../index.html#grading">Grading</a></li>
+												<li><a href = "../../index.html#environment">Classroom Environment</a></li>
+												<li><a href = "../../index.html#participation">Participation</a></li>
+												<li><a href = "../../index.html#collaboration">Collaboration Policy</a></li>
+												<li><a href = "../../index.html#other">Other Resources / Policies</a></li>
+											</ul>
+										</li>
+										<li><a href = "../../Software/index.html">Software</a></li>
+										<li><a href = "../../Schedule/index.html">Schedule</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li>
+													<ul>
+														<li><a href = "../../Assignments/Indy0_SoftwareCheck/index.html">Individual 0: Warmup</a></li>
+														<li><a href = "../../Assignments/Indy1_GeomPrimitives/index.html">Individual 1: Geometric Primitives</a></li>
+														<li>
+															<a href = "../../Assignments/Indy2_SceneTrees/index.html">Individual 2: Scene Trees</a>
+															<ul>
+																<li>
+																	<a href = "../../Assignments/Indy2_SceneTrees/ArtContest/index.html">Art Contest</a>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<a href = "../../Assignments/Assignment3_Shaders/index.html">Assignment 3: Shaders</a>
+															<ul>
+																<li>
+																	<li><a href = "../../Assignments/Assignment3_Shaders/ArtContest/index.html">Art Contest</a></li>
+																</li>
+															</ul>
+														</li>
+														<li><a href = "../../Assignments/Assignment4_RayTracer/index.html">Assignment 4: Ray Tracer</a></li>
+														<li><a href = "../../Assignments/Assignment5_3DShapeModeling/index.html">Assignment 5: Polygon Mesh Processing</a></li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Pre-Class Modules</span>
+											<ul>
+												<li>
+													<ul>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Overview">Module 1: Javascript</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Vectors1">Module 2: Vectors And Dot Products</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/Vectors1">Module 3: Projections, Cross Product, Normals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/LinesAndPlanes1">Module 4: Lines, Rays, And Planes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module5/RayIntersectPlane">Module 5: Ray Intersect Plane/Triangle/Sphere</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module7/Video1">Module 7: 3D Transformations And Scene Trees</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module8/Video1">Module 8: GLSL And Shaders</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module9/Video1">Module 9: Blobby Shaders, Complex Numbers, Fractals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/Video1">Module 10: Local Illumination via Gouraud Shading</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module11/Video1">Module 11: Ray Casting</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module12/Video1">Module 12: Global Illumination Part 1</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module13/Video1">Module 13: Object-First Viewing Projections</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module14/Video1">Module 14: Topological Properties of Manifold Meshes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module15/Video1">Module 15: Heightmaps, Levelsets, And Marching Squares</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Class Exercises</span>
+											<ul>
+												<li>
+													<ul>
+														<li><a href = "../../ClassExercises/Week1Exercises/COVID.html">Week 1: Javascript COVID Simulation</a></li>
+														<li><a href = "../../ClassExercises/Week2_Barycentric/WeightedAverage.html">Week 2: Barycentric Etch-A-Sketch</a></li>
+														<li><a href = "../../ClassExercises/Week5_EmbossMedian">Week 5: GLSL Embossing / Median Filtering</a></li>
+														<li><a href = "../../ClassExercises/Week5_JuliaSets">Week 5: GLSL Julia Sets</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/ClassExercise">Week 6: Phong Shading</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module13/ClassExercise">Week 9: Object-First Camera Viewing</a></li>
+														<li><a href = "../../ClassExercises/Week9_CelShading/CelShading.zip">Week 9: Cel Shading</a></li>
+														<li><a href = "../../ClassExercises/Week14_EulerAngles/index.html">Week 14: Euler Angles</a></li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href = "../../FinalProject/index.html">Final Project</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<div class="mini-posts">
+										Announcements	
+										<ul>
+                                            
+										</ul>									
+                                    </div>
+								</section>
+
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; <a href = "http://www.ctralie.com">Christopher J. Tralie</a>. All rights reserved.  Contact chris.tralie@gmail.com. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+<!-- End Sidebar !-->
+
+<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/skel.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../../assets/js/main.js"></script>
+<!-- End Scripts -->
+	</body>
+</html>

@@ -1,0 +1,6 @@
+[submodule "ClassExercises/Week1Exercises"]
+	path = ClassExercises/Week1Exercises
+	url = https://github.com/Ursinus-CS476-F2020/Week1Exercises.git
+[submodule "ClassExercises/Week2_Barycentric"]
+	path = ClassExercises/Week2_Barycentric
+	url = https://github.com/Ursinus-CS476-F2020/Week2_Barycentric.git
