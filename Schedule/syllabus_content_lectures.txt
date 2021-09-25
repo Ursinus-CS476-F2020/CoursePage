@@ -89,7 +89,7 @@ Final Project Work Session
 LECTURE
 Global Illumination: Multiple Lights, Shadows, Ray Instancing
 
-<ul><li><a href = "https://slate.com/culture/2014/06/the-acoustics-of-eavesdropping-how-curved-ceilings-and-walls-redirect-and-amplify-sound.html">The acoustics of eavesdropping</a></li></ul>
+<ul><li><a href = "https://slate.com/culture/2014/06/the-acoustics-of-eavesdropping-how-curved-ceilings-and-walls-redirect-and-amplify-sound.html">The acoustics of eavesdropping</a></li><li><a href = "https://www.youtube.com/watch?v=8hZl3arO7SY">Carl Sagan's explanation of how the Ancient Greeks knew the earth was round (PBS)</a></li></ul>
 LECTURE
 Work Session
 
