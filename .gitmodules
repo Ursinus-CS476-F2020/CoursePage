@@ -10,9 +10,6 @@
 [submodule "Assignments/Indy1_GeomPrimitives"]
 	path = Assignments/Indy1_GeomPrimitives
 	url = https://github.com/Ursinus-CS476-F2020/Indy1_GeomPrimitives.git
-[submodule "Materials/EulerAnglesViz"]
-	path = Materials/EulerAnglesViz
-	url = https://github.com/COMPSCI290-S2016/EulerAnglesViz.git
 [submodule "Materials/ggslac"]
 	path = Materials/ggslac
 	url = https://github.com/ctralie/ggslac.git
